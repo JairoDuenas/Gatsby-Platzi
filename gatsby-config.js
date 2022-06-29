@@ -41,9 +41,16 @@ module.exports = {
     {
       resolve: `gatsby-source-stripe`,
       options: {
-        objects: [`Price`],
+        objects: [
+          "Balance",
+          "BalanceTransaction",
+          "Product",
+          "ApplicationFee",
+          "Subscription",
+          "Price",
+        ],
         secretKey: process.env.STRIPE_SK,
-        //"sk_test_51LDae9FJJYVOJ16mUqbUMmpyOOcIGHErdEZvkJr84989TLvpLoxSenUzU1JRX5BLvqXIuNKvrCbTWpXFNEWVC1CT00CAV1EbcN",
+        downloadFiles: true,
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
